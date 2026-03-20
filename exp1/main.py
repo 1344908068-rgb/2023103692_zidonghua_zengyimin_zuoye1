@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # --------------------------
 # 任务1: 使用OpenCV读取一张测试图片
 # --------------------------
-img = cv2.imread('exp1/images/zy.jpg')
+img = cv2.imread('exp1/images/origin.jpg')
 
 if img is None:
     raise FileNotFoundError("无法读取图片，请检查文件路径是否正确！")
@@ -51,7 +51,7 @@ plt.show()
 # --------------------------
 # 任务5: 保存处理结果，把灰度图保存为新文件
 # --------------------------
-cv2.imwrite('gray_test.jpg', gray_img)
+cv2.imwrite('exp1/images/gray_test.jpg', gray_img)
 print("灰度图已保存为: gray_test.jpg")
 
 # --------------------------
@@ -67,5 +67,5 @@ else:
 
 #  裁剪区域并保存
 crop_img = img[640:940, 550:850]
-cv2.imwrite('crop_test.jpg', crop_img)
+cv2.imwrite('exp1/images/crop_test.jpg', crop_img)
 print("裁剪区域已保存为: crop_test.jpg")
